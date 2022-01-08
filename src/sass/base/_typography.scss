@@ -1,0 +1,154 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	@include fontSize(16px);
+	font-family: $font-regular;
+	font-style: normal;
+	color: $blue-grey-6;
+}
+
+a {
+	&:hover {
+		text-decoration: none;
+	}
+	&:focus {
+	    outline: none !important;
+    	box-shadow: none;
+    }
+}
+
+p a {
+	display: inline-block;
+	color: inherit;
+	font-weight: 500;
+	text-decoration: underline;
+	&:after {
+		content: '';
+	    display: block;
+	    width: 100%;
+	    height: 1px;
+	    transition: width .3s;
+	}
+	&:hover{
+		background: transparent;
+		&:after {
+			width: 50%;
+		}
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6  {
+	font-family: $font-regular;
+	margin-bottom: 1rem;
+}
+
+h1, .h1{
+	margin-bottom: 1.5rem;
+	@include fontSize(48px);
+	line-height: 112%;
+	letter-spacing: -0.02em;
+	color: $white;
+	@include media-breakpoint-down(md) { @include fontSize(48px); }
+	@include media-breakpoint-down(sm) { @include fontSize(32px); }
+}
+
+h2, .h2{
+  	@include fontSize(32px);
+	line-height: 125%;
+	letter-spacing: -0.01em;
+  	@include media-breakpoint-down(md) { @include fontSize(20px); }
+  	@include media-breakpoint-down(sm) { @include fontSize(20px); }
+}
+
+h3, .h3{
+	@include fontSize(24px);
+	line-height: 142%;
+	@include media-breakpoint-down(md) { @include fontSize(28px); }
+	@include media-breakpoint-down(sm) { @include fontSize(20px); }
+}
+
+h4{
+	@include fontSize(18px);
+	line-height: 133%;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	@include media-breakpoint-down(sm) { @include fontSize(16px); }
+}
+
+h5{
+	@include fontSize(16px);
+	line-height: 133%;
+	letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+	@include media-breakpoint-down(sm) { @include fontSize(14px); }
+}
+h6,.h6{
+	@include fontSize(14px);
+	text-transform: uppercase;
+	font-family: $font-regular;
+	font-weight: 500;
+  	line-height: 1.86;
+  	letter-spacing: 3.5px;
+  	margin-bottom: 2.25rem;
+  	@include media-breakpoint-down(sm) { @include fontSize(12px); }
+}
+
+p {
+	@include fontSize(16px);
+	line-height: 1.5;
+	margin-bottom: 1.5rem;
+	@include media-breakpoint-down(sm) { @include fontSize(16px); }
+}
+p.lead{
+	@include fontSize(24px);
+	line-height: 142%;
+	@include media-breakpoint-down(sm) { @include fontSize(18px); line-height: 156%; }
+}
+.text-lg {
+	font-size: 150%;
+	@include media-breakpoint-down(sm) { font-size: 112.5%; }
+}
+
+
+p:empty {
+   display: none;
+}
+
+i.fal, i.fas {
+	font-style: normal;
+}
+
+.site-main {
+	a {
+		color: $primary;
+		transition: 0.3s;
+	}
+
+	p {
+		@include fontSize(18px);
+		line-height: 156%;
+		margin-bottom: 2rem;
+		@include media-breakpoint-down(sm) { @include fontSize(16px); line-height: 150%; }
+	}
+	p.lead{
+		@include fontSize(24px);
+		line-height: 142%;
+		@include media-breakpoint-down(sm) { @include fontSize(18px); line-height: 156%; }
+	}
+
+}

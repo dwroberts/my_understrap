@@ -1,0 +1,42 @@
+.pagination {
+  text-align: center;
+  justify-content: center;
+
+  li {
+    padding-left: 0;
+    @include fontSize(24px);
+    line-height: 142%;
+    text-align: center;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  a.page__link {
+    color: $blue-grey-6;
+    padding: 0 7px;
+    &:hover {
+      color: $blue-grey-3;
+    }
+
+    i.far {
+      color: $primary;
+      font-size: 21px;
+    }
+  }
+
+  span {
+    color: $blue-grey-6;
+    padding: 0 7px;
+    &.current {
+      color: $primary;
+    }
+
+    i.far {
+      color: $blue-grey-7;
+      font-size: 21px;
+    }
+
+  }
+}
