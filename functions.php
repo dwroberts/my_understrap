@@ -21,8 +21,6 @@ $understrap_includes = array(
 	'/pagination.php',                      // Custom pagination for this theme.
 	'/hooks.php',                           // Custom hooks.
 	'/extras.php',                          // Custom functions that act independently of the theme templates.
-	// '/customizer.php',                      // Customizer additions.
-	// '/custom-comments.php',                 // Custom Comments file.
 	'/class-wp-bootstrap-navwalker.php',    // Load custom WordPress nav walker. Trying to get deeper navigation? Check out: https://github.com/understrap/understrap/issues/567.
 	'/editor.php',                          // Load Editor functions.
 	'/block-editor.php',                    // Load Block Editor functions.
@@ -38,6 +36,9 @@ if ( class_exists( 'WooCommerce' ) ) {
 if ( class_exists( 'Jetpack' ) ) {
 	$understrap_includes[] = '/jetpack.php';
 }
+
+// Optional - Load Adavance Custom Fields json set up
+include_once 'acf-json/setup.php';
 
 // Include files.
 foreach ( $understrap_includes as $file ) {

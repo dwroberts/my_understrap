@@ -8,7 +8,7 @@ while (have_posts()) {
     the_post();
     while (have_rows('flexible_content_group')) {
     	the_row();
-    	include(locate_template('acf-template-parts/' . get_row_layout() . '.php'));
+    	include(locate_template('acf-templates/' . get_row_layout() . '.php'));
     }
 }
 
